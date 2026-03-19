@@ -1,0 +1,21 @@
+{
+  "name": "@district-budget/db",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "migrate": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down",
+    "migrate:create": "node-pg-migrate create",
+    "seed": "ts-node src/seed.ts"
+  },
+  "dependencies": {
+    "pg": "^8.11.0",
+    "node-pg-migrate": "^7.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "@types/pg": "^8.11.0",
+    "typescript": "^5.4.0"
+  }
+}
