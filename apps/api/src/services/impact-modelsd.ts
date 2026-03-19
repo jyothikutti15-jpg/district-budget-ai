@@ -9,14 +9,7 @@
 // - NBER working papers on school funding cuts
 // ============================================================
 
-// Inline types (removed workspace dependency for Railway deployment)
-interface ScenarioInputs {
-  staffReductions: number
-  classSizeIncrease: number
-  programCutPct: number
-  siteBudgetCutPct: number
-  salaryFreeze: boolean
-}
+import type { ScenarioInputs } from '@district-budget/types'
 
 interface DistrictContext {
   enrollment: number

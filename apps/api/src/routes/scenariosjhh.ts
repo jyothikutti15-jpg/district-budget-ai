@@ -4,15 +4,7 @@ import { withDb, withTransaction, writeAuditLog } from '../db'
 import { authenticateToken, requireRole } from '../auth'
 import { computeOutcomes } from '../services/impact-model'
 import { z } from 'zod'
-// Inline types (removed workspace dependency for Railway deployment)
-interface BudgetScenario { id: string; [key: string]: any }
-interface ScenarioInputs {
-  staffReductions: number
-  classSizeIncrease: number
-  programCutPct: number
-  siteBudgetCutPct: number
-  salaryFreeze: boolean
-}
+import type { BudgetScenario, ScenarioInputs } from '@district-budget/types'
 
 const router = Router()
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
