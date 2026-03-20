@@ -73,7 +73,14 @@ router.post(
       return
     }
 
-    const { name, description, fiscalYear, inputs } = parsed.data
+    const { name, description, fiscalYear, inputs: rawInputs } = parsed.data
+    const inputs: ScenarioInputs = {
+      staffReductions: rawInputs.staffReductions ?? 0,
+      classSizeIncrease: rawInputs.classSizeIncrease ?? 0,
+      programCutPct: rawInputs.programCutPct ?? 0,
+      siteBudgetCutPct: rawInputs.siteBudgetCutPct ?? 0,
+      salaryFreeze: rawInputs.salaryFreeze ?? false,
+    }
     const districtId = req.districtId!
 
     // 1. Get district context for impact modeling
