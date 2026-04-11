@@ -12,9 +12,10 @@ Make sure you have these installed:
 - Node.js v20+ → https://nodejs.org
 - Git → https://git-scm.com
 
-### 2. Install dependencies
-```powershell
-cd C:\Projects\district-budget-ai
+### 2. Clone & install dependencies
+```bash
+git clone https://github.com/<your-org>/district-budget-ai.git
+cd district-budget-ai
 npm install
 ```
 
@@ -55,16 +56,16 @@ NEXT_PUBLIC_API_URL=http://localhost:3001
 Open TWO PowerShell windows:
 
 **Window 1 — API server:**
-```powershell
-cd C:\Projects\district-budget-ai\apps\api
+```bash
+cd apps/api
 npm install
 npm run dev
 # Runs on http://localhost:3001
 ```
 
 **Window 2 — Frontend:**
-```powershell
-cd C:\Projects\district-budget-ai\apps\web
+```bash
+cd apps/web
 npm install
 npm run dev
 # Runs on http://localhost:3000
